@@ -1,0 +1,55 @@
+.button{
+    text-decoration: none;
+    width: auto;
+    display: inline-block;
+    background-color: $blue;
+    padding: .75em 1em;
+    border-radius: 4px;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-size: .75em;
+    color: $white;
+    font-size: 1em;
+    transition: .125s all ease;
+    border: 1px solid $blue;
+    &:hover{
+        background-color: lighten($blue, 10%);
+        color: white;
+    }
+    &:active{
+        background-color: $blue-grey;
+        transition: .125s none ease-in;
+        transform: translateY(3px);
+    }
+    &.secondary{
+        background-color: white;
+        border: 1px solid $muted-blue;
+        color: $muted-blue;
+        &:hover{
+            color: $white;
+            background-color: $muted-blue;
+        }
+        &:active{
+            background-color: $blue-grey;
+        }
+    }
+}
+
+
+.content .button{
+    margin-bottom: 1em;
+}
+
+.actions{
+    .button{
+        margin-right: 1em;
+        &.secondary{
+            color: $grey;
+            border-color: $grey;
+            &:hover{
+                color: white;
+                border-color: white;
+            }
+        }
+    }
+}

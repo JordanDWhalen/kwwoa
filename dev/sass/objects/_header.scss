@@ -1,0 +1,72 @@
+header.site{
+    width: 100vw;
+    margin: 0 auto;
+    position: fixed;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+    padding: 0 5vw 0;
+    display: flex;
+    background-color: $white;
+    justify-content: space-between;
+    z-index: 1;
+    a{
+        font-size: 1em;
+        padding: 1.5em 1em 1em;
+        color: $blue-grey;
+        line-height: 2em;
+        font-weight: 600;
+        text-decoration: none;
+        transition: .25s all ease;
+        &:hover{
+            color: $white;
+            background-color:$muted-blue;
+        }
+    }
+    .logo{
+        max-height: 2em;
+        max-width: 150px;
+        img{
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &:hover{
+            background-color: white;
+            transform: scale(1.25);
+        }
+    }
+    .button{
+        height: 2em;
+        line-height: 1em;
+        padding: .5em 1em;
+        display: block;
+        text-transform: uppercase;
+        color: $white;
+        margin-top: 1.5em;
+        &:hover{
+            background-color: lighten($blue, 10%);
+        }
+        &.secondary{
+            color: $blue;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    .cart{
+        display: block;
+        text-indent: -9999px;
+        padding: 1.75em 1.5em .5em;
+        svg{
+            display: block;
+        }
+        g{
+            transition: .5s all ease;
+        }
+        &:hover{
+            g{
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+    }
+}

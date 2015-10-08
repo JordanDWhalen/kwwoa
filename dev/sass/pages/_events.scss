@@ -1,0 +1,35 @@
+.events{
+    .content{
+        margin: 10px 0 50px;
+    }
+    aside{
+        .search{
+            background-image: url(/img/svg/search.svg);
+            padding: .5em 30px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            input[type="text"]{
+                margin-right: -5px;
+            }
+        }
+        .location{
+            background-image: url(/img/svg/location.svg);
+            padding: .5em 30px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        .date{
+            background-image: url(/img/svg/date.svg);
+            padding: .5em 30px;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+    }
+}
+
+.details{
+    .banner{
+        width: 100%;
+        margin: 1em 0;
+    }
+}

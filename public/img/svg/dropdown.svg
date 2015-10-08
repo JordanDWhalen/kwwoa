@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="10px" height="15px" viewBox="0 0 10 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.4 (15510) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 7 + Path 7</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Events" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSArtboardGroup" transform="translate(-943.000000, -238.000000)" id="Path-7-+-Path-7" fill="#4A4A4A">
+            <g sketch:type="MSLayerGroup" transform="translate(943.000000, 238.000000)">
+                <path d="M0,9 L10,9 L5,15.019233 L0,9 Z" id="Path-7" sketch:type="MSShapeGroup"></path>
+                <path d="M0,0 L10,0 L5,6.01923303 L0,0 Z" id="Path-7" opacity="0.5" sketch:type="MSShapeGroup" transform="translate(5.000000, 3.009617) scale(1, -1) translate(-5.000000, -3.009617) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

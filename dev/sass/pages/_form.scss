@@ -1,0 +1,109 @@
+.form{
+    aside{
+        .table{
+            li{
+                width: 50%;
+                &:last-of-type{
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .add_user{
+        padding: 1em;
+        width: 100%;
+        background-color: $white-blue;
+        border: 1px solid $white-grey-blue;
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+        input{
+            &[type="text"]{
+                flex-grow: 1;
+                background-image: url(/img/svg/search.svg);
+                padding: .5em 35px;
+                background-repeat: no-repeat;
+                background-position: 7.5px center;
+                border-radius: 3px;
+            }
+            &[type="submit"]{
+                padding: .5em 2em;
+                border-radius: 3px;
+            }
+            margin-right:1em;
+        }
+    }
+    .add_new_user{
+        section{
+            padding: .5em 1em 1em;
+            width: 100%;
+            background-color: $white-blue;
+            border: 1px solid $white-grey-blue;
+            margin-bottom: -1px;
+            &:first-of-type{
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                margin-top: 1em;
+            }
+            &:last-of-type{
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                margin-bottom: 1em;
+            }
+            h3{
+                margin: 0 0 1em;
+            }
+            input, select{
+                background-color: white;
+                border-color: $light-grey;
+                border-radius: 3px;
+                width: 30%;
+                &:focus{
+                    background-color: $white-grey;
+                }
+            }
+            .group{
+                input{
+                    margin-right:1em;
+                }
+            }
+            .long{
+                input{
+                    width: calc(60% + 1em);
+                }
+            }
+            .search{
+                border-bottom: 1px solid $grey-blue;
+                padding-bottom: 1.25em;
+                margin-bottom: .5em;
+                input{
+                    background-image: url(/img/svg/search.svg);
+                    padding: .5em 35px;
+                    background-repeat: no-repeat;
+                    background-position: 7.5px center;
+                }
+            }
+            .boxes{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                p{
+                    width: 100%;
+                    margin: 0;
+                }
+                div{
+                    margin: 1em 2em 0 0;
+                    input{
+                        width: auto;
+                        margin-right: .5em
+                    }
+                }
+            }
+            div + div {
+                margin-top: 1em;
+            }
+
+        }
+    }
+}

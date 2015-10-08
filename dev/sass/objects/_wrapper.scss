@@ -1,0 +1,26 @@
+.wrapper{
+    max-width: 1200px;
+    width: 90vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    padding-top: 150px;
+    min-height: 105vh;
+    .content{
+        display: flex;
+        .main{
+            width: 65%;
+            padding-right: 5%;
+        }
+        aside{
+            width: 30%;
+            padding-left: 2em;
+            border-left: 1px solid $mid-grey;
+            max-height: 200px;
+            h4{
+                line-height: 72px;
+            }
+        }
+    }
+}

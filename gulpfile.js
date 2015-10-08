@@ -5,10 +5,10 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    livereload = require('gulp-livereload'),
     newer = require('gulp-newer'),
     globbing = require('gulp-css-globbing'),
-    cmq = require('gulp-combine-media-queries');
+    cmq = require('gulp-combine-media-queries'),
+    server = require('gulp-server-livereload');
 
 
 // ROOT TASKS // ---------------------------------------------------------
@@ -68,11 +68,8 @@ gulp.task('watch', ['start'], function() {
   gulp.watch('dev/sass/**/*.scss', ['css']);
   gulp.watch('dev/js/**/*.js', ['js']);
   gulp.watch('dev/img/**/*.{jpg,jpeg,png,gif,svg,ico}', ['img']);
- 
-  livereload.listen();
-  gulp.watch(['public/*.html', 'public/js/**/*.js', 'public/img/**/*.{jpg,jpeg,png,gif,svg,ico}', 'public/css/*.css']).on('change', livereload.changed);
+  gulp.src('public/').pipe(server({ livereload: true, directoryListing: false, open: true, defaultFile: "index.html"}));
 });
-
 // Default function
 gulp.task('default', ['watch']);
 
@@ -81,3 +78,7 @@ function handleError(err) {
   console.log(err.toString());
   this.emit('end');
 }
+
+gulp.task('webserver', function() {
+
+});

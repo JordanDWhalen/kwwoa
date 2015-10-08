@@ -1,0 +1,19 @@
+footer.site{
+    margin-top: 30px;
+    display: flex;
+    padding: 2em 5vw;
+    background-color: $white-grey-blue;
+    width: 100%;
+    justify-content: space-between;
+    a{
+        color: $blue-grey;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 1em;
+        transition: .25s all ease;
+        &:hover{
+            text-decoration: underline;
+            color: $muted-blue;
+        }
+    }
+}
