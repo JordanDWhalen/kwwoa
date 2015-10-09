@@ -1,3 +1,159 @@
 * {
   box-sizing: border-box;
 }
+
+.slider{
+    display: flex;
+    @include breakpoint(724px) {
+        flex-wrap: wrap;
+    }
+    .image{
+        width: 75vw;
+        height: 60vh;
+        @include breakpoint(1300px) {
+            width: 50vw;
+        }
+        @include breakpoint(724px) {
+            width: 100vw;
+        }
+        a{
+            display: block;
+            width: 100%;
+            height: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.active{
+                height: calc(60vh);
+            }
+        }
+    }
+    .links{
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(1300px) {
+            width: 50vw;
+        }
+        @include breakpoint(724px) {
+            width: 100vw;
+        }
+        div{
+            height: calc(5vh + 1px);
+            padding: 1em;
+            background-color: $white-grey;
+            border: 1px solid $light-grey;
+            margin-bottom: -1px;
+            text-decoration: none;
+            transition: .5s all ease;
+            line-height: 6px;
+            display: flex;
+            flex-direction: column;
+            &:hover{
+                background-color: $white-blue;
+                .actions{
+                    background-color: $white-blue;
+                }
+            }
+            &.active{
+                height: 40vh;
+                overflow: scroll;
+            }
+            p{
+                font-weight: 400;
+            }
+        }
+        .credits{
+            height: auto;
+            padding: 1em;
+            background-color: $white-grey-blue;
+            p{
+                margin-bottom: 0;
+            }
+        }
+        .actions{
+            display: block;
+            padding: 2em 0 1em;
+            margin-top: 1em;
+            border: none;
+            border-top: 1px solid $grey-blue;
+            a{
+                display: inline;
+            }
+        }
+    }
+}
+
+.home{
+    .wrapper{
+        @include breakpoint(1300px) {
+            max-width: none;
+            width: 100vw;
+            padding: 62px 0;
+            margin: 0;
+        }
+        @include breakpoint(1024px) {
+            padding-top: 54px;
+        }
+        .content{
+            padding: 2em 0;
+            @include breakpoint(1300px) {
+                padding: 2em;
+            }
+            @include breakpoint(724px) {
+                flex-wrap: wrap;
+            }
+            .main{
+                width: 75%;
+                @include breakpoint(1024px) {
+                    width: 60%;
+                }
+                @include breakpoint(724px) {
+                    width: 100%;
+                }
+            }
+            aside{
+                max-height: none;
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                border-color: $grey-blue;
+                @include breakpoint(1024px) {
+                    width: 40%;
+                }
+                @include breakpoint(724px) {
+                    width: 100%;
+                    border: none;
+                    padding-left: 0;
+                }
+                a{
+                    display: block;
+                    padding: 1em;
+                    width: 100%;
+                    background-color: $white-blue;
+                    border: 1px solid $white-grey;
+                    margin-bottom: -1px;
+                    text-decoration: none;
+                    transition: .5s all ease;
+                    &:hover{
+                        background-color: $white-grey-blue;
+                    }
+                    h4{
+                        line-height: 1.5em;
+                    }
+                    p{
+                        margin-bottom: 0;
+                    }
+                    &:first-of-type{
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+                    &:last-of-type{
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

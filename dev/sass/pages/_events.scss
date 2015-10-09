@@ -1,6 +1,18 @@
 .events{
     .content{
         margin: 10px 0 50px;
+        @include breakpoint(1024px) {
+            flex-wrap: wrap;
+            .main{
+                width: 100%;
+            }
+            aside{
+                width: 100%;
+                padding-left: 0;
+                border: none;
+                max-height: none;
+            }
+        }
     }
     aside{
         .search{
@@ -23,6 +35,68 @@
             padding: .5em 30px;
             background-repeat: no-repeat;
             background-position: left center;
+        }
+    }
+    @include breakpoint(1024px) {
+        table{
+            width: 100%;
+            overflow: scroll;
+            thead{
+                display: none;
+            }
+            th{
+                min-width: 10%;
+            }
+            tr{
+                min-width: 700px;
+                overflow: scroll;
+                td{
+                    display: block;
+                    border: none;
+                    line-height: 1.5em;
+                    width: 100%;
+                    padding-left: 50%;
+                    position: relative;
+                    &:before{
+                        position: absolute;
+                        top: 1em;
+                        left: 1em;
+                        width: 45%;
+                        padding-right: 10px;
+                        white-space: nowrap;
+                    }
+                    &:nth-of-type(1){
+                        &:before{
+                            content: "Title";
+                        }
+                    }
+                    &:nth-of-type(2){
+                        &:before{
+                            content: "Date";
+                        }
+                    }
+                    &:nth-of-type(3){
+                        &:before{
+                            content: "Chapter";
+                        }
+                    }
+                    &:nth-of-type(4){
+                        &:before{
+                            content: "Member Price";
+                        }
+                    }
+                    &:nth-of-type(5){
+                        &:before{
+                            content: "Non-member Price";
+                        }
+                    }
+                    &:nth-of-type(6){
+                        &:before{
+                            content: "Enroll";
+                        }
+                    }
+                }
+            }
         }
     }
 }

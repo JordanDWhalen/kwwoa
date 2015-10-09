@@ -5,6 +5,13 @@ footer.site{
     background-color: $white-grey-blue;
     width: 100%;
     justify-content: space-between;
+    @include breakpoint(1024px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include breakpoint(768px) {
+        flex-direction: column;
+    }
     a{
         color: $blue-grey;
         font-weight: 600;
@@ -14,6 +21,10 @@ footer.site{
         &:hover{
             text-decoration: underline;
             color: $muted-blue;
+        }
+        @include breakpoint(768px) {
+            border-radius: 4px;
+            margin: 0 auto 1em;
         }
     }
 }

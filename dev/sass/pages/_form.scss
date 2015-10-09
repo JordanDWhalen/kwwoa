@@ -1,4 +1,46 @@
 .form{
+    @include breakpoint(1024px) {
+        .content{
+            flex-wrap: wrap;
+        }
+        .wrapper .content .main{
+            width: 100%;
+        }
+        .wrapper .content aside{
+            width: 100%;
+            max-height: none;
+            padding-left: 0;
+            border: none;
+        }
+        .add_user{
+            input{
+                width: 40%;
+            }
+        }
+    }
+    @include breakpoint(724px) {
+        .add_new_user section input, .add_new_user section select{
+            width: 37.5%;
+        }
+        .add_new_user section .long input{
+            width: 80%;
+        }
+        .add_new_user section .group input{
+            margin-right: 4.25%;
+        }
+        .add_new_user section .group input[type="text"]{
+            margin-right: 8.5%;
+        }
+    }
+    @include breakpoint(600px) {
+        .add_new_user section input, .add_new_user section select{
+            width: 45%;
+
+        }
+        .add_new_user section .long input{
+            width: 100%;
+        }
+    }
     aside{
         .table{
             li{

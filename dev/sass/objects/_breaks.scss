@@ -2,4 +2,7 @@
     border-left: 1px solid $grey;
     padding-right: 9px;
     margin: 10px 0 10px 10px;
+    @include breakpoint(850px) {
+        display: none;
+    }
 }

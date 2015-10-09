@@ -25,6 +25,10 @@ h1{
     font-size: 36px;
     line-height: 2em;
     font-weight: 900;
+    @include breakpoint(1024px){
+        line-height: 1em;
+        margin-bottom: .5em;
+    }
 }
 
 h2{

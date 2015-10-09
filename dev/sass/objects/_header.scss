@@ -8,6 +8,12 @@ header.site{
     background-color: $white;
     justify-content: space-between;
     z-index: 1;
+    @include breakpoint(1300px) {
+        padding: 0;
+    }
+    @include breakpoint(850px) {
+        display: none;
+    }
     a{
         font-size: 1em;
         padding: 1.5em 1em 1em;
@@ -16,6 +22,12 @@ header.site{
         font-weight: 600;
         text-decoration: none;
         transition: .25s all ease;
+        @include breakpoint(1300px) {
+            font-size: 14px;
+        }
+        @include breakpoint(1024px) {
+            font-size: 12px;
+        }
         &:hover{
             color: $white;
             background-color:$muted-blue;
@@ -66,6 +78,72 @@ header.site{
             g{
                 fill: #fff;
                 stroke: #fff;
+            }
+        }
+    }
+}
+
+
+header.mobile{
+    display: none;
+    @extend header.site;
+    @include breakpoint(850px) {
+        display: flex;
+        padding: 1em;
+    }
+    .logo{
+        max-height: 2em;
+        max-width: 150px;
+        display: inline-block;
+        img{
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &:hover{
+            background-color: white;
+            transform: scale(1.25);
+        }
+    }
+    .mobile-nav-wrapper{
+        display: none;
+        position: absolute;
+        background-color: transparentize($blue-grey, .05);
+        width: 100%;
+        top: 64px;
+        left: 0;
+
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        transition: none;
+        a{
+            text-align: center;
+            width: 100%;
+            padding: 1em;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .actions{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1em;
+            a{
+                display: inline-block;
+                width: auto;
+                margin: 0;
+            }
+            .button{
+                background-color: transparent;
+                padding: .5em 1em;
+                border-color: white;
+                &.secondary{
+                    border-color: $grey;
+                }
             }
         }
     }

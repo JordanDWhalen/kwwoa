@@ -7,11 +7,20 @@
     z-index: 0;
     padding-top: 150px;
     min-height: 105vh;
+    @include breakpoint(1024px) {
+        padding-top: 84px;
+    }
     .content{
         display: flex;
         .main{
             width: 65%;
             padding-right: 5%;
+            h2{
+                line-height: 1.5em;
+            }
+            article{
+                margin-bottom: 2em;
+            }
         }
         aside{
             width: 30%;
@@ -23,4 +32,9 @@
             }
         }
     }
+}
+
+
+.home .wrapper{
+    padding-top: 72px;
 }
